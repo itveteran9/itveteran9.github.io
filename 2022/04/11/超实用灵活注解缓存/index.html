@@ -1,0 +1,556 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://jieoyjj.gitee.io/itonte-project-separation/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="https://jieoyjj.gitee.io/itonte-project-separation/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="ITVETERAN" href="https://jieoyjj.gitee.io/itonte-project-separation/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="ITVETERAN" href="https://jieoyjj.gitee.io/itonte-project-separation/atom.xml" />
+<link rel="alternate" type="application/json" title="ITVETERAN" href="https://jieoyjj.gitee.io/itonte-project-separation/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://jieoyjj.gitee.io/itonte-project-separation/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/11/%E8%B6%85%E5%AE%9E%E7%94%A8%E7%81%B5%E6%B4%BB%E6%B3%A8%E8%A7%A3%E7%BC%93%E5%AD%98/">
+
+
+
+  <title>
+超实用灵活注解缓存 - redis |
+Yume IT Veteran blogs = ITVETERAN</title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">超实用灵活注解缓存
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2022-04-11 00:22:44">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-04-11T00:22:44+08:00">2022-04-11</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="https://jieoyjj.gitee.io/itonte-project-separation/" rel="start">Yume IT Veteran blogs</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipetfk5zwj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclx6phq6j20zk0m8e36.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeyhsblkj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeuibk9fj20zk0m8ay2.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeyvx1d4j20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipewf5l51j20zk0m8b29.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="https://jieoyjj.gitee.io/itonte-project-separation/">itveteran</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/redis/" itemprop="item" rel="index" title="In redis"><span itemprop="name">redis</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/11/%E8%B6%85%E5%AE%9E%E7%94%A8%E7%81%B5%E6%B4%BB%E6%B3%A8%E8%A7%A3%E7%BC%93%E5%AD%98/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="https://jieoyjj.gitee.io/itonte-project-separation/images/avatar.jpg">
+    <meta itemprop="name" content="it 老夫">
+    <meta itemprop="description" content=", itveteran personal blog">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="ITVETERAN">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <img data-src="https://img.imgdb.cn/item/6078e4398322e6675c3ac487.gif">
+
+<blockquote>
+<p><code>redis 注解缓存</code></p>
+</blockquote>
+<p><code>灵活两个字的话我们 一定要体现出来!!</code></p>
+<p><code> 我们先把 redis 缓存注解的 缓存名称 缓存key 弄一个工具类提出来</code> </p>
+<p><code>1:: 我们先定义一个接口</code> name 和 key</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> : ITveteran•JIE</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 1.0x</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@ClassName</span>: &#123;&quot;classname&quot;:&quot;CacheConstant&quot;&#125;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: TODO &#123;&quot;description&quot;:&quot;redis 缓存 name ro key&quot;&#125; 0_0</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span> : Create in &#123;&quot;date&quot;:&quot;2022/4/11&quot;&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Component</span>  <span class="comment">//交给spring 管理</span></span><br><span class="line"><span class="meta">@SuppressWarnings(&quot;all&quot;)</span> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">CacheConstant</span> </span>&#123;</span><br><span class="line">  <span class="comment">//列如： user_cache 用户的 缓存名称 </span></span><br><span class="line">  String USER_CACHE_NAME = <span class="string">&quot;user_cache&quot;</span>;</span><br><span class="line">  <span class="comment">//再来定义一个 用户的缓存 key 的前缀</span></span><br><span class="line">  String USER_CACHE_KEY_PREFIX = <span class="string">&quot;user_&quot;</span>; </span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>我们已经有了缓存名称和 和缓存key 的前缀</code></p>
+<p><code>我们也可以来定义一个可以方便我们取值的 工具类</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@SuppressWarnings(&quot;all&quot;)</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">GetCacheKey</span> </span>&#123;</span><br><span class="line">       <span class="comment">// 列如：</span></span><br><span class="line">       <span class="comment">/**</span></span><br><span class="line"><span class="comment">        * &lt;span&gt;Description:&lt;/span&gt;&lt;span style=&quot;color:yellow&quot;&gt; ♥&#123;获取用户key&#125;♥ &lt;/span&gt;</span></span><br><span class="line"><span class="comment">        * <span class="doctag">@MethodName</span>: getUserCacheKey</span></span><br><span class="line"><span class="comment">        * <span class="doctag">@author</span> it veteran Jie</span></span><br><span class="line"><span class="comment">        * <span class="doctag">@param</span>  suffix 后缀是什么</span></span><br><span class="line"><span class="comment">        * <span class="doctag">@returned</span> String</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">    <span class="function"><span class="keyword">static</span> String <span class="title">getUserCacheKey</span><span class="params">(String suffix)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> CacheConstant.USER_CACHE_NAME + <span class="string">&quot;::&quot;</span> + CacheConstant.USER_CACHE_KEY_PREFIX + suffix;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>有了这些我们来定义一个redis 支持缓存注解的配置 config</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * ♥</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@ClassName</span>: 【 RedisConfiguration 】</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span> : JIE  on  ITOTone</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: TODO 0_0(-- 【redis 配置类】--)0_0</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span> : Created in 15:32 2021/9/10</span></span><br><span class="line"><span class="comment"> * ♥</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@EnableCaching</span> <span class="comment">//开启缓存注解支持 也可以在启动类上进行 </span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@SuppressWarnings(&quot;all&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RedisConfiguration</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    RedisTemplate redisTemplate; <span class="comment">// 使用 RedisTemplate 对缓存的 那些 序列化等</span></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> RedisTemplate&lt;String, Object&gt; <span class="title">redisTemplate</span><span class="params">(RedisConnectionFactory factory)</span> </span>&#123;</span><br><span class="line">        RedisTemplate&lt;String, Object&gt; template = <span class="keyword">new</span> RedisTemplate&lt;&gt;();</span><br><span class="line">        RedisSerializer&lt;String&gt; redisSerializer = <span class="keyword">new</span> StringRedisSerializer();</span><br><span class="line">        Jackson2JsonRedisSerializer jackson2JsonRedisSerializer = <span class="keyword">new</span> Jackson2JsonRedisSerializer(Object.class);</span><br><span class="line">        ObjectMapper om = <span class="keyword">new</span> ObjectMapper();</span><br><span class="line">        om.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);</span><br><span class="line">        om.enableDefaultTyping(ObjectMapper.DefaultTyping.NON_FINAL);</span><br><span class="line">        jackson2JsonRedisSerializer.setObjectMapper(om);</span><br><span class="line">        template.setConnectionFactory(factory);</span><br><span class="line">        template.setKeySerializer(redisSerializer);</span><br><span class="line">        template.setValueSerializer(jackson2JsonRedisSerializer);</span><br><span class="line">        template.setHashValueSerializer(jackson2JsonRedisSerializer);</span><br><span class="line">        <span class="keyword">return</span> template;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 下面这段就是缓存注解 模式 等 可以设置缓存的过期时间</span></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> CacheManager <span class="title">cacheManager</span><span class="params">(RedisConnectionFactory factory)</span> </span>&#123;</span><br><span class="line">        RedisSerializer&lt;String&gt; redisSerializer = <span class="keyword">new</span> StringRedisSerializer();</span><br><span class="line">        Jackson2JsonRedisSerializer jackson2JsonRedisSerializer = <span class="keyword">new</span> Jackson2JsonRedisSerializer(Object.class);</span><br><span class="line">        ObjectMapper om = <span class="keyword">new</span> ObjectMapper();</span><br><span class="line">        om.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);</span><br><span class="line">        om.enableDefaultTyping(ObjectMapper.DefaultTyping.NON_FINAL);</span><br><span class="line">        jackson2JsonRedisSerializer.setObjectMapper(om);</span><br><span class="line">        RedisCacheConfiguration config = RedisCacheConfiguration.defaultCacheConfig()</span><br><span class="line">                .entryTtl(Duration.ofSeconds(<span class="number">3600</span> * <span class="number">24</span> * <span class="number">10</span>)) <span class="comment">// 过期时间 可以按照自己的需求来顶</span></span><br><span class="line">                .serializeKeysWith(RedisSerializationContext.SerializationPair.fromSerializer(redisSerializer))</span><br><span class="line">              .serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(jackson2JsonRedisSerializer))</span><br><span class="line">                .disableCachingNullValues();</span><br><span class="line">        RedisCacheManager cacheManager = RedisCacheManager.builder(factory)</span><br><span class="line">                .cacheDefaults(config)</span><br><span class="line">                .build();</span><br><span class="line">        <span class="keyword">return</span> cacheManager;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>小伙伴们 我们这些都定义好了我们开始来使用了哦</code></p>
+</blockquote>
+<p>我们先来介绍一下这些注解的作用哦？？</p>
+<ul>
+<li>  <span style="color:red">删除</span>  <code>@CacheEvict</code></li>
+</ul>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//案例：可以删除多个哦 格式如下：</span></span><br><span class="line"> <span class="meta">@Caching(</span></span><br><span class="line"><span class="meta">     evict = &#123;@CacheEvict(value = 你的缓存名称, key = &quot;&#x27;&quot; + 你缓存的前缀key 后面可以加参数也可以动态      的哦 【all】 + &quot;all&#x27;&quot;),</span></span><br><span class="line"><span class="meta">    @CacheEvict(value = 你的缓存名称, key = &quot;&#x27;&quot; + 你缓存的前缀key + &quot;all&#x27;+#id&quot;, allEntries = true)&#125;</span></span><br><span class="line"><span class="meta">    )</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><span style="color:red">查询</span>  如果这个业务中 只有 当前什么缓存名称的话 可以提出来哦 怎么提出来呢？？</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在你的类上加上这个注解 </span></span><br><span class="line"><span class="meta">@CacheConfig(cacheNames = 你缓存的名称)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//案例：可以删除多个哦 格式如下： #noticeType+#currentPage+#rows 你要缓存的 唯一参数  </span></span><br><span class="line"> <span class="comment">// #result==null 返回值不等与null list 的话  &quot;#result.size()==0&quot;  的不要缓存哦 </span></span><br><span class="line"><span class="meta">@Cacheable(key = &quot;&#x27;&quot;+缓存的key+&quot;&#x27;+#noticeType+#currentPage+#rows&quot;,unless = &quot;#result==null&quot;)</span> </span><br></pre></td></tr></table></figure></li>
+<li><p> <span style="color:red">修改和添加</span> 是使用这个注解哦 进行缓存的修改 也可以 直接删除那个操作也可以 这个 修改缓存更加好哦！！  <code>allEntries</code> ：是否清除所有缓存数据，默认值是false </p>
+</li>
+</ul>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 删除  </span></span><br><span class="line"><span class="meta">@Caching(</span></span><br><span class="line"><span class="meta">     evict = &#123;@CacheEvict(value = 你的缓存名称, key = &quot;&#x27;&quot; + 你缓存的前缀key 后面可以加参数也可以动态      的哦 【all】 + &quot;all&#x27;&quot;),</span></span><br><span class="line"><span class="meta">    @CacheEvict(value = 你的缓存名称, key = &quot;&#x27;&quot; + 你缓存的前缀key + &quot;all&#x27;+#id&quot;, allEntries = true)&#125;</span></span><br><span class="line"><span class="meta">    )</span></span><br><span class="line"><span class="comment">// 修改</span></span><br><span class="line"> <span class="meta">@Caching(</span></span><br><span class="line"><span class="meta">      evict = &#123;@CachePut(key = &quot;&#x27;&quot;+缓存的key+&quot;&#x27;+#noticeType+#currentPage+#rows&quot;)&#125;</span></span><br><span class="line"><span class="meta"> )</span></span><br></pre></td></tr></table></figure>
+<p><code>如果需要去值的话上面定义好了那个直接调用那个方法 加你的后缀哦</code></p>
+<p>比如我要取 <code>all+#id </code>后缀的</p>
+<p>直接调用 然后把你这个进行</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GetCacheKey.getUserCacheKey(<span class="string">&quot;all1001&quot;</span>) <span class="comment">// 这个就是取 id为 1001 前面不变</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="学无止境！"><a href="#学无止境！" class="headerlink" title="学无止境！"></a>学无止境！</h3>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2022-04-11 01:50:31" itemprop="dateModified" datetime="2022-04-11T01:50:31+08:00">2022-04-11</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="https://jieoyjj.gitee.io/itonte-project-separation/images/wechatpay.png" alt="it 老夫 WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div>
+        <img data-src="https://jieoyjj.gitee.io/itonte-project-separation/images/alipay.png" alt="it 老夫 Alipay">
+        <p>Alipay</p>
+      </div>
+      
+      <div>
+        <img data-src="https://jieoyjj.gitee.io/itonte-project-separation/images/paypal.png" alt="it 老夫 PayPal">
+        <p>PayPal</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>it 老夫 <i class="ic i-at"><em>@</em></i>ITVETERAN
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/11/%E8%B6%85%E5%AE%9E%E7%94%A8%E7%81%B5%E6%B4%BB%E6%B3%A8%E8%A7%A3%E7%BC%93%E5%AD%98/" title="超实用灵活注解缓存">https://jieoyjj.gitee.io/itonte-project-separation/2022/04/11/超实用灵活注解缓存/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/02/vue%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%81%8A%E5%A4%A9/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclfw2t96j20zk0m8x6p.jpg" title="vue机器人聊天">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> vue</span>
+  <h3>vue机器人聊天</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%A6%E6%97%A0%E6%AD%A2%E5%A2%83%EF%BC%81"><span class="toc-number">1.</span> <span class="toc-text">学无止境！</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+        <ul>
+          <li class="active"><a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/11/%E8%B6%85%E5%AE%9E%E7%94%A8%E7%81%B5%E6%B4%BB%E6%B3%A8%E8%A7%A3%E7%BC%93%E5%AD%98/" rel="bookmark" title="超实用灵活注解缓存">超实用灵活注解缓存</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="it 老夫"
+      data-src="https://jieoyjj.gitee.io/itonte-project-separation/images/avatar.jpg">
+  <p class="name" itemprop="name">it 老夫</p>
+  <div class="description" itemprop="description">itveteran personal blog</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="https://jieoyjj.gitee.io/itonte-project-separation/archives/">
+        <span class="count">15</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/">
+        <span class="count">5</span>
+        <span class="name">categories</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL0ppZWxlc3MtSHVi" title="https:&#x2F;&#x2F;github.com&#x2F;Jieless-Hub"><i class="ic i-github"></i></span>
+      <span class="exturl item gitee" data-url="aHR0cHM6Ly9naXRlZS5jb20vSmllb3lqag==" title="https:&#x2F;&#x2F;gitee.com&#x2F;Jieoyjj"><i class="ic i-facebook"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvbXkvbS9tdXNpYy9wbGF5bGlzdD9pZD01NDUzNDg1OTUy" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;my&#x2F;m&#x2F;music&#x2F;playlist?id&#x3D;5453485952"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOml0b3RvbnRlQDE2My5jb20=" title="mailto:itotonte@163.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="https://jieoyjj.gitee.io/itonte-project-separation/" rel="section"><i class="ic i-home"></i>itveteran</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="https://jieoyjj.gitee.io/itonte-project-separation/zuow/" rel="section"><i class="ic i-list-alt"></i>zuow</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="https://jieoyjj.gitee.io/itonte-project-separation/mistake/" rel="section"><i class="ic i-list-alt"></i>mistake</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>Posts</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="https://jieoyjj.gitee.io/itonte-project-separation/archives/" rel="section"><i class="ic i-list-alt"></i>Archives</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/" rel="section"><i class="ic i-th"></i>Categories</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="https://jieoyjj.gitee.io/itonte-project-separation/tags/" rel="section"><i class="ic i-tags"></i>Tags</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/linux/" title="In linux">linux</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/docker/" title="docker">docker</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/mysql/" title="In mysql">mysql</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/03/19/mysql%E6%97%B6%E9%97%B4%E6%9F%A5%E8%AF%A2/" title="mysql时间查询">mysql时间查询</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/mysql/" title="In mysql">mysql</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/12/mysql/" title="MYSQL">MYSQL</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/redis/" title="In redis">redis</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/11/%E8%B6%85%E5%AE%9E%E7%94%A8%E7%81%B5%E6%B4%BB%E6%B3%A8%E8%A7%A3%E7%BC%93%E5%AD%98/" title="超实用灵活注解缓存">超实用灵活注解缓存</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/git/" title="In git">git</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/gitee/" title="Gitee">Gitee</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/git/" title="In git">git</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/03/15/git%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" title="git管理工具">git管理工具</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/02/md5/" title="md5">md5</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/02/json/" title="json">json</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/12/mqtt/" title="MQTT">MQTT</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/linux/" title="In linux">linux</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/15/linux%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%E5%A4%A7%E5%85%A8/" title="linux 软件安装">linux 软件安装</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">it 老夫 @ Yume IT Veteran blogs</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2022/04/11/超实用灵活注解缓存/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,audio: ["https://music.163.com/#/song?id=1822203673","https://music.163.com/#/song?id=1394137429"],fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',quiz: {
+      choice: "Multiple Choice",
+      multiple: "Multiple Answer",
+      true_false: "True/False",
+      essay: "Questions",
+      gap_fill: "Gap Filling",
+      mistake: "Wrong Answer"
+    },
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="https://jieoyjj.gitee.io/itonte-project-separation/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

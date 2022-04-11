@@ -88,12 +88,12 @@ Yume IT Veteran blogs = ITVETERAN</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipetv6p75j20zk0m8x6p.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclhnx9glj20zk0m8npd.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclh3brzpj20zk0m8ann.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipevo9j1jj20zk0m8e81.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclgi503lj20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipevuctzzj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicit4jrvuj20zk0m8785.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipesrnqv3j20zk0m8ava.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclj9410cj20zk0m8h12.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph4fomxoj20zk0m8axp.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciundwu5j20zk0m8n9e.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclize41wj20zk0m87gk.jpg"></li>
         </ul>
       </div>
     </header>
@@ -134,7 +134,54 @@ Yume IT Veteran blogs = ITVETERAN</title>
     <blockquote>
 <p>编程常见错误页面</p>
 </blockquote>
-<p>​      欢迎您！！</p>
+<p>​     swagger报错 <code>Illegal DefaultValue 1 for parameter type integer</code> 异常</p>
+<p>​     到依赖中加入这两个</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.swagger<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>swagger-annotations<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.5.21<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.swagger<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>swagger-models<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.5.21<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>springboot 项目 创建时间误差错误   时间和当前时间不对劲 是数据库连接 这个 UTC 会导致 时间误差</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">    datasource:</span><br><span class="line">      driver-class-name: com.mysql.cj.jdbc.Driver</span><br><span class="line">      url: jdbc:mysql://192.168.142.128:3307/liweiiotdb?serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=utf-8</span><br><span class="line">      username: root</span><br><span class="line">      password: admin</span><br><span class="line">      type: com.alibaba.druid.pool.DruidDataSource</span><br></pre></td></tr></table></figure>
+
+<p>修改完之后  【 Asia/Shanghai】就可以了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  datasource:</span><br><span class="line">    driver-class-name: com.mysql.cj.jdbc.Driver</span><br><span class="line">    url: jdbc:mysql://192.168.99.88:3306/liweiiotdb?serverTimezone=Asia/Shanghai&amp;useUnicode=true&amp;characterEncoding=utf-8</span><br><span class="line">    username: root</span><br><span class="line">    password: 123</span><br><span class="line">    type: com.alibaba.druid.pool.DruidDataSource</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>springboot 项目报错</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Error creating bean with name <span class="string">&#x27;documentationPluginsBootstrapper&#x27;</span> defined in URL   [jar:file:/D:/ITveteranJieofwholefile/itveteranJIeof_maven_File/apache-maven-<span class="number">3.8</span><span class="number">.1</span>/MavenRepoITotone/io/springfox/springfox-spring-web/<span class="number">3.0</span><span class="number">.0</span>/springfox-spring-web-<span class="number">3.0</span><span class="number">.0</span>.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter <span class="number">1</span>; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name <span class="string">&#x27;webMvcRequestHandlerProvider&#x27;</span> defined in URL [jar:file:/D:/ITveteranJieofwholefile/itveteranJIeof_maven_File/apache-maven-<span class="number">3.8</span><span class="number">.1</span>/MavenRepoITotone/io/springfox/springfox-spring-webmvc/<span class="number">3.0</span><span class="number">.0</span>/springfox-spring-webmvc-<span class="number">3.0</span><span class="number">.0</span>.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter <span class="number">2</span>; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name <span class="string">&#x27;requestMappingHandlerMapping&#x27;</span> defined in <span class="class"><span class="keyword">class</span> <span class="title">path</span> <span class="title">resource</span> [<span class="title">org</span>/<span class="title">springframework</span>/<span class="title">boot</span>/<span class="title">autoconfigure</span>/<span class="title">web</span>/<span class="title">servlet</span>/<span class="title">WebMvcAutoConfiguration</span>$<span class="title">EnableWebMvcConfiguration</span>.<span class="title">class</span>]: <span class="title">Invocation</span> <span class="title">of</span> <span class="title">init</span> <span class="title">method</span> <span class="title">failed</span></span>; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map <span class="string">&#x27;equipmentController&#x27;</span> method</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这个错误就是你的 controller 接口相同 没有更改</p>
+</blockquote>
+<blockquote>
+<p><code>redis 修改了 redis.conf 配置文件不生效</code></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">如果 linux 中 修改了 redis.conf 配置文件 不生效的话 需要如下 执行 `./src/redis-server redis.conf`</span><br><span class="line"></span><br><span class="line">如果是 `./src/redis-server` 这样是不行的 配置文件不会生效</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>vue 页面 刷新 出现 404 怎么办？？ 是什么问题呢  </p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">只需要 把 路由中的 &#x27;history 改成 &#x27;hash&#x27;, 即可  亲测有效</span><br><span class="line">      | mode: &#x27;hash&#x27;,</span><br><span class="line">      | mode: &#x27;history&#x27;,</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>vue 出现 前端后端 跨域问题 改怎么呢？</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports=&#123;</span><br><span class="line">    <span class="attr">devServer</span>: &#123;</span><br><span class="line">        <span class="comment">// 配置端口</span></span><br><span class="line">        <span class="attr">port</span>: <span class="number">5214</span>,</span><br><span class="line">        <span class="comment">// 不检查host</span></span><br><span class="line">        <span class="attr">disableHostCheck</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="comment">// 配置代理</span></span><br><span class="line">        <span class="attr">proxy</span>: &#123;</span><br><span class="line">            <span class="string">&#x27;/&#x27;</span>: &#123;</span><br><span class="line">                <span class="comment">// 配置URL 后端需要代理</span></span><br><span class="line">                <span class="attr">target</span>: <span class="string">&#x27;http://localhost:8877/&#x27;</span>,</span><br><span class="line">                <span class="comment">// 是否允许跨域</span></span><br><span class="line">                <span class="attr">changeOrigin</span>: <span class="literal">true</span>,</span><br><span class="line">                <span class="comment">// 请求重写，这里是把ruben替换成空串</span></span><br><span class="line">                <span class="attr">pathRewrite</span>: &#123;</span><br><span class="line">                    <span class="string">&#x27;^/&#x27;</span>: <span class="string">&#x27;/&#x27;</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>怎么拦截 所有 不存在的 页面呢  只需路由中 配置 * 是代表所有的    :: 代码如下</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   path: &#x27;*&#x27;,</span><br><span class="line">   redirect:&quot;/error_404&quot;,</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+
+
 <p>​           完善中……..</p>
 
   </div>
@@ -142,6 +189,13 @@ Yume IT Veteran blogs = ITVETERAN</title>
    <footer>
 
     <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2022-02-13 18:30:34" itemprop="dateModified" datetime="2022-02-13T18:30:34+08:00">2022-02-13</time>
+  </span>
 </div>
 
       
@@ -216,8 +270,14 @@ Yume IT Veteran blogs = ITVETERAN</title>
 <nav class="state">
     <div class="item posts">
       <a href="https://jieoyjj.gitee.io/itonte-project-separation/archives/">
-        <span class="count">3</span>
+        <span class="count">15</span>
         <span class="name">posts</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/">
+        <span class="count">5</span>
+        <span class="name">categories</span>
       </a>
     </div>
 </nav>
@@ -301,9 +361,20 @@ Yume IT Veteran blogs = ITVETERAN</title>
   <li class="item">
     
 <div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/mysql/" title="In mysql">mysql</a>
 </div>
 
-    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/06/12/git%20Feil/" title="Untitled">Untitled</a></span>
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/12/mysql/" title="MYSQL">MYSQL</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/linux/" title="In linux">linux</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/linux/" title="linux">linux</a></span>
   </li>
 
       
@@ -312,7 +383,27 @@ Yume IT Veteran blogs = ITVETERAN</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/11/mysql/" title="MYSQL">MYSQL</a></span>
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/02/md5/" title="md5">md5</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/git/" title="In git">git</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/gitee/" title="Gitee">Gitee</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/git/" title="In git">git</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/03/15/git%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" title="git管理工具">git管理工具</a></span>
   </li>
 
       
@@ -321,7 +412,46 @@ Yume IT Veteran blogs = ITVETERAN</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/11/mqtt/" title="MQTT">MQTT</a></span>
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/12/mqtt/" title="MQTT">MQTT</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/vue/" title="In vue">vue</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/02/vue%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%81%8A%E5%A4%A9/" title="vue机器人聊天">vue机器人聊天</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/redis/" title="redis file">redis file</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/linux/" title="In linux">linux</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/15/linux%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%E5%A4%A7%E5%85%A8/" title="linux 软件安装">linux 软件安装</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/redis/" title="In redis">redis</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/11/%E8%B6%85%E5%AE%9E%E7%94%A8%E7%81%B5%E6%B4%BB%E6%B3%A8%E8%A7%A3%E7%BC%93%E5%AD%98/" title="超实用灵活注解缓存">超实用灵活注解缓存</a></span>
   </li>
 
   </ul>
@@ -336,7 +466,7 @@ Yume IT Veteran blogs = ITVETERAN</title>
   <div class="copyright">
     
     &copy; 2010 – 
-    <span itemprop="copyrightYear">2021</span>
+    <span itemprop="copyrightYear">2022</span>
     <span class="with-love">
       <i class="ic i-sakura rotate"></i>
     </span>
