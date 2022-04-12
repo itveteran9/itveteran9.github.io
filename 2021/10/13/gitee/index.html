@@ -24,6 +24,8 @@
 <link rel="stylesheet" href="https://jieoyjj.gitee.io/itonte-project-separation/css/app.css?v=0.2.5">
 
   
+  <meta name="keywords" content="Git管理" />
+
 
 <link rel="canonical" href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/gitee/">
 
@@ -100,12 +102,12 @@ Yume IT Veteran blogs = ITVETERAN</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclj61ylzj20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipewr8iypj20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicis081o9j20zk0m8dmr.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipew8gmvyj20zk0m87wh.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipey84bjtj20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicljgocqbj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclh0m9pdj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipetlbztpj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicitht3xtj20zk0m8k5v.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipevuctzzj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclgrvbd6j20zk0m8qv5.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph47e9vtj20zk0m8x6l.jpg"></li>
         </ul>
       </div>
     </header>
@@ -154,7 +156,7 @@ Yume IT Veteran blogs = ITVETERAN</title>
     <img data-src="https://img.imgdb.cn/item/6078e4398322e6675c3ac487.gif">
 
 <blockquote>
-<p>$ hexo  ==Git 中 常用命令==</p>
+<p>==Git 中 常用命令==</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">$ hexo</span><br><span class="line"><span class="comment">#绑定你的github 的名称和邮箱：                              </span></span><br><span class="line">git config --global user.name  <span class="string">&quot;名字&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;451360397@qq.com&quot;</span></span><br><span class="line"></span><br><span class="line">git init                     <span class="comment">#在当前目录新建一个git 代码库</span></span><br><span class="line">git <span class="built_in">clone</span> [url]              <span class="comment"># 克隆一个项目到自己本地</span></span><br><span class="line">git add                      <span class="comment">#需要添加暂存区文件名 |称将需要进行版本管理的文件放入暂存区;</span></span><br><span class="line">git commit -m 需要提交的文件   <span class="comment">#将暂存区的文件提交到git仓库</span></span><br><span class="line">git push                     <span class="comment">#提交到github 仓库</span></span><br><span class="line">git status                   <span class="comment">#查看状态</span></span><br><span class="line">git status [jiess]           <span class="comment">#查看指定文件状态</span></span><br><span class="line">git config --global --list   <span class="comment">#查看当前用户的配置</span></span><br><span class="line"></span><br><span class="line">              <span class="comment">#git分支常用命令</span></span><br><span class="line">git branch                  <span class="comment">#列出所有本地分之</span></span><br><span class="line">git branch -r               <span class="comment">#列出所有远程分之</span></span><br><span class="line">git branch [branch-name]    <span class="comment">#新建一个分之 但是依然停留在当前分之</span></span><br><span class="line">git checkout -b [branch]    <span class="comment">#新建一个分之 并切换到该分之</span></span><br><span class="line">git merge [branch]          <span class="comment">#合并指定分之到当前分之</span></span><br><span class="line">git branch -d [branch-name] <span class="comment">#删除分之</span></span><br><span class="line">               <span class="comment">#删除远程分支</span></span><br><span class="line">git push origin --delete [branch-name]</span><br><span class="line">git branch -dr [remote/branch]</span><br><span class="line">git merge [branchc]  <span class="comment">#--》合并指定分之到当前分之</span></span><br></pre></td></tr></table></figure>
 
@@ -206,11 +208,14 @@ Yume IT Veteran blogs = ITVETERAN</title>
 <p>或者<br>$ sudo yum install git</p>
 </li>
 </ol>
-<h3 id="配置-git"><a href="#配置-git" class="headerlink" title="配置 git"></a><strong>配置 git</strong></h3><p>安装完成后通过下述命令配置 git 的用户名，以及邮箱地址。将 faith 改成你的用户名，<span class="exturl" data-url="bWFpbHRvOiYjeDY2OyYjeDYxOyYjMTA1OyYjeDc0OyYjMTA0OyYjeDQwOyYjeDZkOyYjeDZmOyYjeDZmOyYjOTk7JiN4MmU7JiM5OTsmIzExMTsmIzEwOTs=">&#x66;&#x61;&#105;&#x74;&#104;&#x40;&#x6d;&#x6f;&#x6f;&#99;&#x2e;&#99;&#111;&#109;</span> 改成你的邮箱。</p>
+<h3 id="配置-git"><a href="#配置-git" class="headerlink" title="配置 git"></a><strong>配置 git</strong></h3><p>安装完成后通过下述命令配置 git 的用户名，以及邮箱地址。将 faith 改成你的用户名，<span class="exturl" data-url="bWFpbHRvOiYjeDY2OyYjOTc7JiN4Njk7JiMxMTY7JiMxMDQ7JiN4NDA7JiMxMDk7JiN4NmY7JiN4NmY7JiN4NjM7JiM0NjsmI3g2MzsmI3g2ZjsmIzEwOTs=">&#x66;&#97;&#x69;&#116;&#104;&#x40;&#109;&#x6f;&#x6f;&#x63;&#46;&#x63;&#x6f;&#109;</span> 改成你的邮箱。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;faith&quot;</span><br><span class="line">$ git config --global user.email &quot;faith@mooc.com&quot;</span><br></pre></td></tr></table></figure>
 
 <p><span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s">https://hexo.io/docs/one-command-deployment.html</span>)</p>
 
+      <div class="tags">
+          <a href="https://jieoyjj.gitee.io/itonte-project-separation/tags/Git%E7%AE%A1%E7%90%86/" rel="tag"><i class="ic i-tag"></i> Git管理</a>
+      </div>
   </div>
 
    <footer>
@@ -221,7 +226,7 @@ Yume IT Veteran blogs = ITVETERAN</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2022-04-11 00:28:22" itemprop="dateModified" datetime="2022-04-11T00:28:22+08:00">2022-04-11</time>
+    <time title="Modified: 2022-04-12 18:38:28" itemprop="dateModified" datetime="2022-04-12T18:38:28+08:00">2022-04-12</time>
   </span>
 </div>
 
@@ -278,7 +283,7 @@ Yume IT Veteran blogs = ITVETERAN</title>
     <div class="item right">
       
 
-  <a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/vue/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeun65urj20zk0m81ii.jpg" title="vue">
+  <a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/vue/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclh0m9pdj20zk0m8hdt.jpg" title="vue">
   <span class="type">Next Post</span>
   <span class="category"><i class="ic i-flag"></i> vue</span>
   <h3>vue</h3>
@@ -330,7 +335,7 @@ Yume IT Veteran blogs = ITVETERAN</title>
     </div>
     <div class="item tags">
       <a href="https://jieoyjj.gitee.io/itonte-project-separation/tags/">
-        <span class="count">1</span>
+        <span class="count">6</span>
         <span class="name">tags</span>
       </a>
     </div>
@@ -418,17 +423,36 @@ Yume IT Veteran blogs = ITVETERAN</title>
 <a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/git/" title="In git">git</a>
 </div>
 
-    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/gitee/" title="Gitee">Gitee</a></span>
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/03/15/git%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" title="git管理工具">git管理工具</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/vue/" title="In vue">vue</a>
 </div>
 
-    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/02/vue%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%81%8A%E5%A4%A9/" title="vue机器人聊天">vue机器人聊天</a></span>
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/redis/" title="redis file">redis file</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/java/" title="In java">java</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/12/webfluxCrud%E6%A1%88%E4%BE%8B/" title="webfluxCrud案例">webfluxCrud案例</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/linux/" title="In linux">linux</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/docker/" title="docker">docker</a></span>
   </li>
 
       
@@ -445,10 +469,10 @@ Yume IT Veteran blogs = ITVETERAN</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/mysql/" title="In mysql">mysql</a>
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/vue/" title="In vue">vue</a>
 </div>
 
-    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/12/mysql/" title="MYSQL">MYSQL</a></span>
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/02/vue%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%81%8A%E5%A4%A9/" title="vue机器人聊天">vue机器人聊天</a></span>
   </li>
 
       
@@ -457,7 +481,7 @@ Yume IT Veteran blogs = ITVETERAN</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/12/mqtt/" title="MQTT">MQTT</a></span>
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/02/md5/" title="md5">md5</a></span>
   </li>
 
       
@@ -474,19 +498,10 @@ Yume IT Veteran blogs = ITVETERAN</title>
   <li class="item">
     
 <div class="breadcrumb">
-</div>
-
-    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/redis/" title="redis file">redis file</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/linux/" title="In linux">linux</a>
 </div>
 
-    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/linux/" title="linux">linux</a></span>
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/09/%E9%9D%99%E6%80%81ip%E5%9C%B0%E5%9D%80/" title="静态ip地址">静态ip地址</a></span>
   </li>
 
       
@@ -495,17 +510,7 @@ Yume IT Veteran blogs = ITVETERAN</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/02/md5/" title="md5">md5</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/mysql/" title="In mysql">mysql</a>
-</div>
-
-    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/03/19/mysql%E6%97%B6%E9%97%B4%E6%9F%A5%E8%AF%A2/" title="mysql时间查询">mysql时间查询</a></span>
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/12/mqtt/" title="MQTT">MQTT</a></span>
   </li>
 
   </ul>

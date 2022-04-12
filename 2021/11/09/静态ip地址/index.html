@@ -24,6 +24,8 @@
 <link rel="stylesheet" href="https://jieoyjj.gitee.io/itonte-project-separation/css/app.css?v=0.2.5">
 
   
+  <meta name="keywords" content="linux" />
+
 
 <link rel="canonical" href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/09/%E9%9D%99%E6%80%81ip%E5%9C%B0%E5%9D%80/">
 
@@ -100,12 +102,12 @@ Yume IT Veteran blogs = ITVETERAN</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclize41wj20zk0m87gk.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclxxcb6rj20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclhtuo6nj20zk0m8ttm.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipevo9j1jj20zk0m8e81.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclwrdwyaj20zk0m8are.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclflwv2aj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipexj2jgzj20zk0m8b09.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicivghyooj20zk0m8dir.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicit4jrvuj20zk0m8785.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipex2cdtbj20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclhfehz7j20zk0m8u0x.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipevarprfj20zk0m8npd.jpg"></li>
         </ul>
       </div>
     </header>
@@ -157,6 +159,9 @@ Yume IT Veteran blogs = ITVETERAN</title>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">1): 进入 </span><br><span class="line">   cd /etc/sysconfig/network-scripts 文件夹下</span><br><span class="line">   </span><br><span class="line">2): 找到 ifcfg-ens33 文件 有些人的不是一样的</span><br><span class="line">    里面添加这么一段配置:</span><br><span class="line">        [&#123;</span><br><span class="line">         BOOTPROTO=static          #设置网卡获得ip地址的方式，这里是静态修改成static，默认是dhcp</span><br><span class="line">         DNS1=192.168.30.2         #DNS服务器 </span><br><span class="line">         IPADDR=192.168.99.88      #设置的静态固定IP地址</span><br><span class="line">         NETMASK=225.225.225.0     #网掩码</span><br><span class="line">         GATEWAY=192.168.30.2      #网关地址</span><br><span class="line">        &#125;]</span><br><span class="line">    有些人的 都是有 双引号的  这些配置需要你自己设置你自己的 </span><br><span class="line">       【网关地址，网掩码，DNS服务器】需要设置你自己的 在vm 中查看 </span><br><span class="line">       【IPADDR】--&gt; 这个就是你的静态ip地址设置 最好前面 是192.168 后面不能超过 225</span><br><span class="line">        添加完你自己相对应的:</span><br><span class="line">        </span><br><span class="line">3): 最后保存配置文件，重启网络服务</span><br><span class="line">       执行命令： 【service network restart】 重启</span><br><span class="line">4): 在打开你的linux 终端输入 ifconfig 查看 如果查看到你的是你自己设置的就成功了</span><br><span class="line">    注意： 一定不要是桥接模式 要改为 NAT 模式！！</span><br><span class="line">    注意： 一定不要是桥接模式 要改为 NAT 模式！！</span><br><span class="line">    注意： 一定不要是桥接模式 要改为 NAT 模式！！</span><br></pre></td></tr></table></figure>
 
 
+      <div class="tags">
+          <a href="https://jieoyjj.gitee.io/itonte-project-separation/tags/linux/" rel="tag"><i class="ic i-tag"></i> linux</a>
+      </div>
   </div>
 
    <footer>
@@ -167,7 +172,7 @@ Yume IT Veteran blogs = ITVETERAN</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2021-11-09 11:04:24" itemprop="dateModified" datetime="2021-11-09T11:04:24+08:00">2021-11-09</time>
+    <time title="Modified: 2022-04-12 18:37:06" itemprop="dateModified" datetime="2022-04-12T18:37:06+08:00">2022-04-12</time>
   </span>
 </div>
 
@@ -222,7 +227,7 @@ Yume IT Veteran blogs = ITVETERAN</title>
     <div class="item left">
       
 
-  <a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/02/md5/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicm0fdw5cj20zk0m8hdt.jpg" title="md5">
+  <a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/02/md5/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicis081o9j20zk0m8dmr.jpg" title="md5">
   <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>md5</h3>
@@ -232,7 +237,7 @@ Yume IT Veteran blogs = ITVETERAN</title>
     <div class="item right">
       
 
-  <a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/12/mysql/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giciuv0socj20zk0m8qes.jpg" title="MYSQL">
+  <a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/12/mysql/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicli3sbvtj20zk0m8x6p.jpg" title="MYSQL">
   <span class="type">Next Post</span>
   <span class="category"><i class="ic i-flag"></i> mysql</span>
   <h3>MYSQL</h3>
@@ -283,7 +288,7 @@ Yume IT Veteran blogs = ITVETERAN</title>
     </div>
     <div class="item tags">
       <a href="https://jieoyjj.gitee.io/itonte-project-separation/tags/">
-        <span class="count">1</span>
+        <span class="count">6</span>
         <span class="name">tags</span>
       </a>
     </div>
@@ -370,40 +375,30 @@ Yume IT Veteran blogs = ITVETERAN</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/git/" title="In git">git</a>
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/redis/" title="In redis">redis</a>
 </div>
 
-    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/gitee/" title="Gitee">Gitee</a></span>
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/11/%E8%B6%85%E5%AE%9E%E7%94%A8%E7%81%B5%E6%B4%BB%E6%B3%A8%E8%A7%A3%E7%BC%93%E5%AD%98/" title="超实用灵活注解缓存">超实用灵活注解缓存</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/linux/" title="In linux">linux</a>
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/vue/" title="In vue">vue</a>
 </div>
 
-    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/linux/" title="linux">linux</a></span>
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/vue/" title="vue">vue</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/linux/" title="In linux">linux</a>
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/vue/" title="In vue">vue</a>
 </div>
 
-    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/docker/" title="docker">docker</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/mysql/" title="In mysql">mysql</a>
-</div>
-
-    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/12/mysql/" title="MYSQL">MYSQL</a></span>
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/02/vue%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%81%8A%E5%A4%A9/" title="vue机器人聊天">vue机器人聊天</a></span>
   </li>
 
       
@@ -412,7 +407,7 @@ Yume IT Veteran blogs = ITVETERAN</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/02/md5/" title="md5">md5</a></span>
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/redis/" title="redis file">redis file</a></span>
   </li>
 
       
@@ -429,28 +424,10 @@ Yume IT Veteran blogs = ITVETERAN</title>
   <li class="item">
     
 <div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/java/" title="In java">java</a>
 </div>
 
-    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/12/mqtt/" title="MQTT">MQTT</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/redis/" title="In redis">redis</a>
-</div>
-
-    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/11/%E8%B6%85%E5%AE%9E%E7%94%A8%E7%81%B5%E6%B4%BB%E6%B3%A8%E8%A7%A3%E7%BC%93%E5%AD%98/" title="超实用灵活注解缓存">超实用灵活注解缓存</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/redis/" title="redis file">redis file</a></span>
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/12/webfluxCrud%E6%A1%88%E4%BE%8B/" title="webfluxCrud案例">webfluxCrud案例</a></span>
   </li>
 
       
@@ -460,7 +437,36 @@ Yume IT Veteran blogs = ITVETERAN</title>
 <a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/linux/" title="In linux">linux</a>
 </div>
 
-    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/09/%E9%9D%99%E6%80%81ip%E5%9C%B0%E5%9D%80/" title="静态ip地址">静态ip地址</a></span>
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/docker/" title="docker">docker</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/linux/" title="In linux">linux</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/linux/" title="linux">linux</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/12/mqtt/" title="MQTT">MQTT</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/mysql/" title="In mysql">mysql</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/12/mysql/" title="MYSQL">MYSQL</a></span>
   </li>
 
   </ul>
