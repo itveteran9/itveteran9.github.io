@@ -1,0 +1,972 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://jieoyjj.gitee.io/itonte-project-separation/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="https://jieoyjj.gitee.io/itonte-project-separation/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="ITVETERAN" href="https://jieoyjj.gitee.io/itonte-project-separation/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="ITVETERAN" href="https://jieoyjj.gitee.io/itonte-project-separation/atom.xml" />
+<link rel="alternate" type="application/json" title="ITVETERAN" href="https://jieoyjj.gitee.io/itonte-project-separation/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://jieoyjj.gitee.io/itonte-project-separation/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="Mysql" />
+
+
+<link rel="canonical" href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/12/mysql/">
+
+
+
+  <title>
+MYSQL - mysql |
+Yume IT Veteran blogs = ITVETERAN = 总访问量 21710 👁</title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">MYSQL
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2021-11-12 17:17:48">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2021-11-12T17:17:48+08:00">2021-11-12</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="https://jieoyjj.gitee.io/itonte-project-separation/" rel="start">Yume IT Veteran blogs</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclj61ylzj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeubcbajj20zk0m8h1h.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciundwu5j20zk0m8n9e.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipesrnqv3j20zk0m8ava.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipet4bz0yj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeuibk9fj20zk0m8ay2.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="https://jieoyjj.gitee.io/itonte-project-separation/">itveteran</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/mysql/" itemprop="item" rel="index" title="In mysql"><span itemprop="name">mysql</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/12/mysql/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="https://jieoyjj.gitee.io/itonte-project-separation/images/avatar.jpg">
+    <meta itemprop="name" content="it 老夫">
+    <meta itemprop="description" content="总访问量 21710 👁, itveteran personal blog">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="ITVETERAN">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>mysql笔记 itveteran</p>
+<img data-src="https://img.imgdb.cn/item/6078e4398322e6675c3ac487.gif">
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><blockquote>
+<p>启动MySQL服务器</p>
+</blockquote>
+<ul>
+<li>net start mssqlserver</li>
+<li>net stop mssqlserver</li>
+</ul>
+<ol>
+<li>net start mysql:启动mysql的服务</li>
+<li>net stop mysql:停止mysql的服务</li>
+</ol>
+<blockquote>
+<p>连接MySQL</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo mysql -uMySQL的账号 -pMySQL的密码</span><br></pre></td></tr></table></figure>
+
+<p><code>比如:</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo mysql -uroot -518340</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意:出现</strong></p>
+<blockquote>
+<p>mySql表示mySql已经连接成功</p>
+</blockquote>
+<blockquote>
+<p>查看mysql的数据库</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show databases</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>创建数据库</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database 数据库名</span><br></pre></td></tr></table></figure>
+
+<p><code>比如:</code></p>
+<ol>
+<li><strong>create database JIedb</strong></li>
+</ol>
+<blockquote>
+<p>删除数据库</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop database 数据名</span><br></pre></td></tr></table></figure>
+
+<p><code>比如:</code></p>
+<p>drop database  test</p>
+<blockquote>
+<p>使用数据库</p>
+</blockquote>
+<p>use 数据库</p>
+<p><code>比如:</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use jieless</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>创建表</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> StudentT11(</span><br><span class="line">  id <span class="type">int</span>,</span><br><span class="line">  name <span class="type">varchar</span>(<span class="number">20</span>),</span><br><span class="line">  sex <span class="type">int</span></span><br><span class="line">);　　</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>查看表</p>
+</blockquote>
+<p>desc 表名</p>
+<p><code>比如:</code></p>
+<p>desc StudentJie</p>
+<blockquote>
+<p>☆单词</p>
+</blockquote>
+<ul>
+<li>非空约束     not null</li>
+<li>默认约束     default</li>
+<li>唯一约束     unique key(UK)</li>
+<li>主键约束     primary key(PK)</li>
+<li>外键约束     foreign key(FK)</li>
+<li>自动增长     auto_increment</li>
+<li>字符集       charset</li>
+<li>注释        comment</li>
+</ul>
+<p><code>**注意**:在dos窗口当中,编码格式是gbk的格式,我们的开发工具SQLyog的编码是utf-8的格式,那么会导致一个问题出现,乱码,所以在dos窗口解决这个乱码的问题</code></p>
+<p>==set names gbk;==</p>
+<blockquote>
+<p>☆修改表名</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 旧表名 rename 新表名</span><br></pre></td></tr></table></figure>
+
+<p>​                   </p>
+<blockquote>
+<p>☆dos窗口退出mysql</p>
+</blockquote>
+<p>exit;</p>
+<blockquote>
+<p>★添加主键约束</p>
+</blockquote>
+<p><code>主键是一个非空,唯一</code></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 <span class="keyword">add</span> <span class="keyword">constraint</span> 主键名 <span class="keyword">primary</span> key 表名(主键字段)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>★修改字段</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 modify 字段名 数据类型[属性]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>★添加字段</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 <span class="keyword">add</span> 字段名 数据类型[属性]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>★修改字段名</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 change 原字段名 新字段名 数据类型[属性]</span><br></pre></td></tr></table></figure>
+
+<p><code>★★注意:</code></p>
+<p>​    操作小技巧</p>
+<p>​         <strong>按键盘的上下左右可以翻之前的代码</strong></p>
+<blockquote>
+<p>★删除字段</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 <span class="keyword">drop</span> 字段</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>★删除主键</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 <span class="keyword">drop</span> <span class="keyword">primary</span> key;</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>★建立主外键关系</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 外键表 <span class="keyword">add</span> <span class="keyword">constraint</span> 外键名 <span class="keyword">foreign</span> key (外键表外键字段) <span class="keyword">references</span> 主表(主表主键字段)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>添加数据</p>
+</blockquote>
+<p><code>注意:和T-SQL的标识列区别是:</code></p>
+<ol>
+<li> T-SQL的标识列完全由数据库来控制,</li>
+<li> MySQL是可以手动控制</li>
+</ol>
+<blockquote>
+<p>处理乱码的问题</p>
+</blockquote>
+<p>1.set names gbk;看下有没有用,没有用的话执行第二步</p>
+<p>2.找到你的MySQL安装包</p>
+<p>3.再找到my.ini文件</p>
+<p>4.修改default-character-set:客户端默认字符串,修改成default-character-set:utf8</p>
+<p>5.修改:character-set-server:服务器端默认字符串,修改成character-set-server:utf8</p>
+<p>6.删除原先的数据库(然后将数据库重新创建,再set names gbk),那么乱码的问题就解决了</p>
+<blockquote>
+<p>复合主键(组合主键)</p>
+</blockquote>
+<p>我们在外面做开发的时候,单个字段的主键有可能满足不了我们的需求,那么这个时候我们就会用到复合主键(组合主键),那么什么是复合主键(组合主键)呢?  </p>
+<p>复合主键(组合主键)就是多个字段组成一个主键,那么这多个字段就叫做复合主键(组合主键)</p>
+<p><code>数据库的端口号默认就是3306</code></p>
+<p><strong>我们每一台电话都有一个自己独立的IP地址</strong></p>
+<p><em>Ip地址相当于我们的身份证一份的</em></p>
+<p>那么我的眼睛,鼻子,嘴巴相当于我们的端口号</p>
+<p><code>再比如:</code></p>
+<p>Ip地址相当于我们的小区里面的每一栋楼</p>
+<p>端口号就相当于一栋楼里面的每一个房间</p>
+<p>那么本地的IP地址就是</p>
+<p>localhost或者127.0.0.1</p>
+<blockquote>
+<p>★数据表的基本操作</p>
+</blockquote>
+<p><code>增加:</code></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> 表名(列) <span class="keyword">value</span>(字段);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> 表名 <span class="keyword">value</span>(字段);</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>多数据的插入方法</p>
+</blockquote>
+<p><code>★方法一:</code></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> 表名(列) <span class="keyword">value</span>(字段),(字段),(字段)... ...</span><br></pre></td></tr></table></figure>
+
+<p><code>★方法二:</code></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> 新表(字段<span class="number">1</span>,字段<span class="number">2</span>,字段<span class="number">3.</span>.. ...)</span><br><span class="line"><span class="keyword">select</span> 字段<span class="number">1</span>,字段<span class="number">2</span>,字段<span class="number">3.</span>.. <span class="keyword">from</span> 旧表</span><br></pre></td></tr></table></figure>
+
+<p><em><code>★注意:新表已存在</code></em></p>
+<p><code>★方法三:</code></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> 新表(</span><br><span class="line"><span class="keyword">select</span> 字段<span class="number">1</span>,字段<span class="number">2.</span>... <span class="keyword">from</span> 旧表</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p><code>注意:新表不存在</code></p>
+<blockquote>
+<p>★删除</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> 表名 [条件]</span><br></pre></td></tr></table></figure>
+
+<p><code>注意:删除,</code></p>
+<ol>
+<li>自动增长不复位 truncate tabel 表名</li>
+<li>注意:自动增长复位</li>
+</ol>
+<blockquote>
+<p>★修改</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update 表名 <span class="keyword">set</span> 字段<span class="number">1</span><span class="operator">=</span>值<span class="number">1</span>,字段<span class="number">2</span> <span class="operator">=</span> 值<span class="number">2</span> [<span class="keyword">where</span> 条件]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>★查询</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> 字段名 <span class="keyword">from</span> 表名</span><br><span class="line">[<span class="keyword">where</span> 条件]</span><br><span class="line">[<span class="keyword">group</span> <span class="keyword">by</span> 分组字段名]</span><br><span class="line">[<span class="keyword">having</span> 分组条件]</span><br><span class="line">[<span class="keyword">order</span> <span class="keyword">by</span> 排序 <span class="keyword">desc</span><span class="operator">/</span><span class="keyword">asc</span>]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>★聚合函数</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">avg</span>()              平均分</span><br><span class="line"><span class="built_in">count</span>()            统计</span><br><span class="line"><span class="built_in">max</span>()              求最大值</span><br><span class="line"><span class="built_in">min</span>()              求最小值</span><br><span class="line"><span class="built_in">sum</span>()              求和</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>★别名</p>
+</blockquote>
+<p><code>AS</code></p>
+<blockquote>
+<p>★分页查询</p>
+</blockquote>
+<p><code>limit</code></p>
+<ul>
+<li><p>select 字段 from 表名 limit n      :n表示你要查询前n条数据</p>
+</li>
+<li><p>select 字段 from 表名 limit n,m    :n你要显示的第n+1条,每页m条</p>
+</li>
+<li><p>比如:</p>
+</li>
+<li><p>```<br>select * from t11table limit 3,2</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">   </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt;★字符串函数</span><br><span class="line"></span><br><span class="line">- concat(str1,str2,str3...):字符串连接  </span><br><span class="line">- SELECT CONCAT(&#x27;java&#x27;,&#x27;mysql&#x27;,&#x27;sql server&#x27;);</span><br><span class="line">- insert(str,start,len,newStr):字符串替换</span><br><span class="line">- SELECT INSERT(&#x27;这是sql server数据库&#x27;,3,10,&#x27;mysql&#x27;);</span><br><span class="line">- lower()      字符串修改成小写</span><br><span class="line">- SELECT LOWER(&#x27;mySQL&#x27;);</span><br><span class="line">- upper()      字符串修改成大写</span><br><span class="line">- SELECT UPPER(&#x27;mySQL&#x27;);</span><br><span class="line">- substring(str,start,len)  字符串截图</span><br><span class="line">- SELECT SUBSTRING(&#x27;这是sql server&#x27;,3,10);</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">&gt;★mysql获取datetime当中的年月日</span><br><span class="line"></span><br><span class="line">[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)</span><br><span class="line"></span><br><span class="line">```bash</span><br><span class="line">$ hexo</span><br><span class="line">year(time)      获取年</span><br><span class="line">month(time)   获取月</span><br><span class="line">day(time)       获取日</span><br><span class="line">date(time)       获取年月日</span><br><span class="line">hour(time)      获取时</span><br><span class="line">minute(time)   获取分</span><br><span class="line">second(time)   获取秒</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><a href="javascript:void(0);"><img data-src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<p><code>例如:</code></p>
+<ol>
+<li>ELECT ename,YEAR(eHiredate) FROM employee WHERE eName = ‘jieless’;</li>
+<li>SELECT ename,MONTH(eHiredate) FROM employee WHERE eName = ‘jieless’;</li>
+<li>SELECT ename,DAY(eHiredate) FROM employee WHERE eName = ‘jieless’;</li>
+<li>SELECT ename,DATE(eHiredate) FROM employee WHERE eName = ‘jieless’;</li>
+<li>SELECT ename,HOUR(eHiredate) FROM employee WHERE eName = ‘jieless’;</li>
+<li>SELECT ename,MINUTE(eHiredate) FROM employee WHERE eName = ‘jieless’;</li>
+<li>SELECT ename,SECOND(eHiredate) FROM employee WHERE eName = ‘jieless’;</li>
+</ol>
+<blockquote>
+<p>★子查询</p>
+</blockquote>
+<p>*<code>*select 字段 from 表名 where exists (子查询)**</code></p>
+<p>*<code>*exists:如果子查询返回的结果为true,那么就执行外层语句**</code></p>
+<p><code> **否则不执行外层语句</code>**</p>
+<p><strong><code>not exists:与exists相反</code></strong></p>
+<p><code>★库,表</code></p>
+<p><strong><code>建议先写</code></strong></p>
+<blockquote>
+<p>注释</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">comment  <span class="string">&#x27;注释&#x27;</span>  #没有等于 <span class="operator">=</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>查看数据库的详细信息</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">create</span> database 数据库名</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>★创建数据库指定字符集</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> database 数据库名 <span class="type">character</span> <span class="keyword">set</span> gbk<span class="operator">/</span>utf8;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>★查看数据表的详细信息</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">create</span> <span class="keyword">table</span> 表名</span><br></pre></td></tr></table></figure>
+
+<p><code>engine:引擎</code></p>
+<p><code>engine=innoDB       表示表可以进行外键和事务等高级操作</code></p>
+<p><code>engine=myisam       只支持基础的增删改查</code></p>
+<p><strong>注意:默认引擎(engine)是innoDB格式</strong></p>
+<blockquote>
+<p>★创建表指定引擎和字符集编码</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> 表名(字段) engine <span class="operator">=</span> myisam<span class="operator">/</span>innoDB(默认) charset <span class="operator">=</span> utf8<span class="operator">/</span>gbk</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>★修改的表的引擎和字符集编码</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 engine <span class="operator">=</span> myisam<span class="operator">/</span>innoDB charset <span class="operator">=</span> utf8<span class="operator">/</span>gbk</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>★修改字段的位置</p>
+</blockquote>
+<p><code>1.将字段放入到最前面</code></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 modify 字段名 数据类型 <span class="keyword">first</span></span><br></pre></td></tr></table></figure>
+
+<p>2<code>.放入到XXX字段的后面</code></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 modify 字段名 数据类型 after xxx</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>★引擎</p>
+</blockquote>
+<ul>
+<li>engine</li>
+<li>innoDB</li>
+<li>myisam</li>
+</ul>
+<blockquote>
+<p>★修改表名</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rename <span class="keyword">table</span> 原名 <span class="keyword">to</span> 新名</span><br></pre></td></tr></table></figure>
+
+<p><code>冗余</code></p>
+<p><em><strong>冗余是由于表设计不够合理,导入大量的重复数据产生</strong></em></p>
+<blockquote>
+<p>事务</p>
+</blockquote>
+<p><code>操作事务:</code></p>
+<p><code>1.开启事务</code></p>
+<p>begin   或者    start transaction</p>
+<p>2.提交或者回滚事务</p>
+<ul>
+<li>commit或者rollback</li>
+</ul>
+<p><code>★自动事务</code></p>
+<p>1.开启自动事务提交</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> autocommit <span class="operator">=</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>2.关闭自动事务提交</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> autocommit <span class="operator">=</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<p>**<code>★什么是事务?**</code></p>
+<p><strong>☆务是数据中执行统一多条SQL语句的工作单位,可以保证多条SQL全部执行成功,或者全部执行失败</strong></p>
+<p>★务必须要具备的四条属性</p>
+<ul>
+<li>☆子性:事务是一个完整操作,事务的执行步骤是不可分的,要不都执行,要不都不执行</li>
+<li>☆致性:当事务完成时,数据必须处于一致的状态</li>
+<li>☆并发事务彼此隔离,独立的,不应该以任何的方式依赖于或影响其他事务</li>
+<li>☆久性:事务完成之后,他对数据库的保存将永久保存.</li>
+</ul>
+<blockquote>
+<p>视图</p>
+</blockquote>
+<p><strong>视图是一张虚拟表,是表示一张表的数据或者多张表的数据,其结构和数据是建立在查询的基础之上</strong></p>
+<p>创建一个视图</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">view</span> 视图名 <span class="keyword">as</span> 查询语句</span><br></pre></td></tr></table></figure>
+
+<p>删除视图</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">view</span> 视图名</span><br></pre></td></tr></table></figure>
+
+<p>查看视图</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> 字段 <span class="keyword">from</span> 视图名</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>★索引</p>
+</blockquote>
+<p><code>什么是索引</code></p>
+<ul>
+<li><strong>索引是一种有效的组合数据方式,为了快速的查找指定的记录</strong></li>
+</ul>
+<p><em><strong>★作用</strong></em></p>
+<ul>
+<li><strong>大大提高数据库检索速度,他能够改善数据库的性能</strong></li>
+</ul>
+<p><code>★分类</code></p>
+<ol>
+<li>普通索引:基本索引类型(运行在定义索引的列中插入重复键和空值)</li>
+<li>唯一索引:索引列的数据不重复</li>
+<li>主键索引:非空,唯一(一个主键将自动创建主键索引)</li>
+<li>复合索引:将多个列组合作为索引类使用</li>
+<li>全文索引:支持全文检索(允许重复的,空值)</li>
+<li>空间索引:对空间的数据类型建立索引</li>
+</ol>
+<blockquote>
+<p>★创建索引</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> [<span class="keyword">unique</span><span class="operator">|</span>fulltext<span class="operator">|</span>spatial] index 索引名 <span class="keyword">on</span> 表名(字段名)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>★查看索引</p>
+</blockquote>
+<ul>
+<li>show index from 表名</li>
+<li>Table       :索引所在的表名</li>
+<li>Non_unique  :索引是否是唯一(0:唯一索引  1:不是唯一索引)</li>
+<li>Key_name   :索引的名称</li>
+<li>Seq_in_index :该列在索引当中的位置(1,单列的)</li>
+<li>Column_name :定义索引的字段名</li>
+<li>Collation    :索引的存储顺序(A,升序的,null:无分类的)</li>
+<li>Index_type   :索引类型</li>
+</ul>
+<blockquote>
+<p>★删除索引</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> index 索引名 <span class="keyword">on</span> 表名</span><br></pre></td></tr></table></figure>
+
+<p><code>注意:在删除表时,表上的所有索引都会被删除</code></p>
+<blockquote>
+<p>★数据库的备份和恢复</p>
+</blockquote>
+<p><code>mysqldump:</code></p>
+<p><code>*★★注意:*</code></p>
+<p><strong>dos命令(不是在 mysql&gt;  下执行,并且不要写 ; ),用来做备份的</strong></p>
+<p><strong>★语法:</strong></p>
+<ul>
+<li><code>mysqldump -u用户名 -p用户明码 数据库名 数据表 &gt; 路径</code></li>
+</ul>
+<ol>
+<li>drop table if exitst <code>t1</code></li>
+<li>如果t1表存在,那么就删除</li>
+<li>mysql:</li>
+</ol>
+<p><code>注意:</code></p>
+<p><strong>dos命令(不是在 mysql&gt;  下执行,并且不要写 ; ),用户做恢复的</strong></p>
+<p><strong>需要恢复的数据库必须要提前创建</strong></p>
+<p><code>语法:</code></p>
+<p><strong>mysql -u用户名 -p用户密码 数据库中存在(需要恢复数据的)数据库名 &lt; 路径</strong></p>
+<blockquote>
+<p>数据表的关系</p>
+</blockquote>
+<p><code>一对一的关系:</code></p>
+<p><strong>建表原则:</strong></p>
+<ol>
+<li>一张表使用另外一张表的主键作为主键</li>
+</ol>
+<blockquote>
+<p>一对多的关系:</p>
+</blockquote>
+<p><strong>建表原则:</strong></p>
+<ol>
+<li>从表使用主表的主键作为外键</li>
+</ol>
+<blockquote>
+<p>多对多的关系</p>
+</blockquote>
+<p><strong>建表原则:</strong></p>
+<ol>
+<li>创建一张中间表,使用两个表的主键作为外键</li>
+</ol>
+
+      <div class="tags">
+          <a href="https://jieoyjj.gitee.io/itonte-project-separation/tags/Mysql/" rel="tag"><i class="ic i-tag"></i> Mysql</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2022-04-12 18:39:20" itemprop="dateModified" datetime="2022-04-12T18:39:20+08:00">2022-04-12</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="https://jieoyjj.gitee.io/itonte-project-separation/images/wechatpay.png" alt="it 老夫 WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div>
+        <img data-src="https://jieoyjj.gitee.io/itonte-project-separation/images/alipay.png" alt="it 老夫 Alipay">
+        <p>Alipay</p>
+      </div>
+      
+      <div>
+        <img data-src="https://jieoyjj.gitee.io/itonte-project-separation/images/paypal.png" alt="it 老夫 PayPal">
+        <p>PayPal</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>it 老夫 <i class="ic i-at"><em>@</em></i>ITVETERAN
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/12/mysql/" title="MYSQL">https://jieoyjj.gitee.io/itonte-project-separation/2021/11/12/mysql/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/09/%E9%9D%99%E6%80%81ip%E5%9C%B0%E5%9D%80/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclj61ylzj20zk0m8b29.jpg" title="静态ip地址">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> linux</span>
+  <h3>静态ip地址</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/12/mqtt/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicljgocqbj20zk0m8e81.jpg" title="MQTT">
+  <span class="type">Next Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>MQTT</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+        <ul>
+          <li class="active"><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/12/mysql/" rel="bookmark" title="MYSQL">MYSQL</a></li><li><a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/03/19/mysql%E6%97%B6%E9%97%B4%E6%9F%A5%E8%AF%A2/" rel="bookmark" title="mysql时间查询">mysql时间查询</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="it 老夫"
+      data-src="https://jieoyjj.gitee.io/itonte-project-separation/images/avatar.jpg">
+  <p class="name" itemprop="name">it 老夫</p>
+  <div class="description" itemprop="description">itveteran personal blog</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="https://jieoyjj.gitee.io/itonte-project-separation/archives/">
+        <span class="count">16</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/">
+        <span class="count">6</span>
+        <span class="name">categories</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="https://jieoyjj.gitee.io/itonte-project-separation/tags/">
+        <span class="count">6</span>
+        <span class="name">tags</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL0ppZWxlc3MtSHVi" title="https:&#x2F;&#x2F;github.com&#x2F;Jieless-Hub"><i class="ic i-github"></i></span>
+      <span class="exturl item gitee" data-url="aHR0cHM6Ly9naXRlZS5jb20vSmllb3lqag==" title="https:&#x2F;&#x2F;gitee.com&#x2F;Jieoyjj"><i class="ic i-facebook"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvbXkvbS9tdXNpYy9wbGF5bGlzdD9pZD01NDUzNDg1OTUy" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;my&#x2F;m&#x2F;music&#x2F;playlist?id&#x3D;5453485952"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOml0b3RvbnRlQDE2My5jb20=" title="mailto:itotonte@163.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="https://jieoyjj.gitee.io/itonte-project-separation/" rel="section"><i class="ic i-home"></i>主页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="https://jieoyjj.gitee.io/itonte-project-separation/aboutme/" rel="section"><i class="ic i-list-alt"></i>关于我</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="https://jieoyjj.gitee.io/itonte-project-separation/learningwebsite/" rel="section"><i class="ic i-magic"></i>开往</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="https://jieoyjj.gitee.io/itonte-project-separation/mistake/" rel="section"><i class="ic i-heart"></i>错误本</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>Posts</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/" rel="section"><i class="ic i-th"></i>Categories</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="https://jieoyjj.gitee.io/itonte-project-separation/tags/" rel="section"><i class="ic i-tags"></i>Tags</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/09/%E9%9D%99%E6%80%81ip%E5%9C%B0%E5%9D%80/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/12/mqtt/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/12/mqtt/" title="MQTT">MQTT</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/redis/" title="redis file">redis file</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/linux/" title="In linux">linux</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/linux/" title="linux">linux</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/linux/" title="In linux">linux</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/15/linux%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%E5%A4%A7%E5%85%A8/" title="linux 软件安装">linux 软件安装</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/git/" title="In git">git</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/gitee/" title="Gitee">Gitee</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/redis/" title="In redis">redis</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/11/%E8%B6%85%E5%AE%9E%E7%94%A8%E7%81%B5%E6%B4%BB%E6%B3%A8%E8%A7%A3%E7%BC%93%E5%AD%98/" title="超实用灵活注解缓存">超实用灵活注解缓存</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/vue/" title="In vue">vue</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/vue/" title="vue">vue</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/git/" title="In git">git</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/03/15/git%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" title="git管理工具">git管理工具</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/mysql/" title="In mysql">mysql</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/12/mysql/" title="MYSQL">MYSQL</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/linux/" title="In linux">linux</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/09/%E9%9D%99%E6%80%81ip%E5%9C%B0%E5%9D%80/" title="静态ip地址">静态ip地址</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">it 老夫 @ Yume IT Veteran blogs</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2021/11/12/mysql/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,audio: ["https://music.163.com/#/song?id=1822203673","https://music.163.com/#/song?id=1394137429"],fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',quiz: {
+      choice: "Multiple Choice",
+      multiple: "Multiple Answer",
+      true_false: "True/False",
+      essay: "Questions",
+      gap_fill: "Gap Filling",
+      mistake: "Wrong Answer"
+    },
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="https://jieoyjj.gitee.io/itonte-project-separation/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

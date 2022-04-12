@@ -1,0 +1,694 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://jieoyjj.gitee.io/itonte-project-separation/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="https://jieoyjj.gitee.io/itonte-project-separation/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="ITVETERAN" href="https://jieoyjj.gitee.io/itonte-project-separation/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="ITVETERAN" href="https://jieoyjj.gitee.io/itonte-project-separation/atom.xml" />
+<link rel="alternate" type="application/json" title="ITVETERAN" href="https://jieoyjj.gitee.io/itonte-project-separation/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://jieoyjj.gitee.io/itonte-project-separation/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="linux" />
+
+
+<link rel="canonical" href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/docker/">
+
+
+
+  <title>
+docker - linux |
+Yume IT Veteran blogs = ITVETERAN = 总访问量 21710 👁</title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">docker
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2021-10-13 22:31:45">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2021-10-13T22:31:45+08:00">2021-10-13</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="https://jieoyjj.gitee.io/itonte-project-separation/" rel="start">Yume IT Veteran blogs</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipetv6p75j20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclxfdlttj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclga70tsj20zk0m84mr.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclxxcb6rj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipewf5l51j20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclhtuo6nj20zk0m8ttm.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="https://jieoyjj.gitee.io/itonte-project-separation/">itveteran</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/linux/" itemprop="item" rel="index" title="In linux"><span itemprop="name">linux</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/docker/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="https://jieoyjj.gitee.io/itonte-project-separation/images/avatar.jpg">
+    <meta itemprop="name" content="it 老夫">
+    <meta itemprop="description" content="总访问量 21710 👁, itveteran personal blog">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="ITVETERAN">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <img data-src="https://img.imgdb.cn/item/6078e4398322e6675c3ac487.gif">
+
+<h2 id="目前软件开发的问题-用来引出docker"><a href="#目前软件开发的问题-用来引出docker" class="headerlink" title="目前软件开发的问题(用来引出docker)"></a>目前软件开发的问题(用来引出docker)</h2><p>1、软件安装问题：开发环境安装一遍所有软件(jdk、mysql、tomcat等)，测试环境也要安装一遍、最后正式环境    (生产环境)还得安装一遍，每换一台机器都得重新安装。</p>
+<p>2、环境配置和环境不兼容问题：软件安装后，还得配置每台机器的环境，好不容易环境配好了，发现环境不兼容，在开发环境运行正常，上了测试环境、正式环境却运行不了。</p>
+<p>3、提问：要再10台新机器上部署一个springboot项目，该怎么办？</p>
+<h2 id="docker-介绍"><a href="#docker-介绍" class="headerlink" title="docker 介绍"></a>docker 介绍</h2><p>1、docker是一种虚拟化的容器技术，docker将运行项目的每个部分都当做一个小容器，如：将tomcat当做一个容器，mysql当做一个容器等等。当要使用的时候，就将各个小容器组装起来使用。类似于集装箱一样，将不同的东西放在不同的箱子中装好，最后组装好一次运走。docker就是使用集装箱的概念。(最好带学生看docker的图标，一个乌龟背了很多箱子)</p>
+<p>2、docker可以让开发者轻松的将应用以及依赖包打包到一个容器中，然后部署到任何流行的Linux机器上，而不需要关心环境问题。</p>
+<p>[3、容器是完全使用沙箱机制]</p>
+<p>4、docker容器技术的好处：</p>
+<p>启动快</p>
+<p>资源占用少</p>
+<p>轻量级(体积小)</p>
+<h2 id="5、docker应用场景："><a href="#5、docker应用场景：" class="headerlink" title="5、docker应用场景："></a>5、docker应用场景：</h2><p>构建一次性的环境：如，快速构建开发环境、测试环境、正式环境统一环境。</p>
+<p>实现自动化一键部署。</p>
+<h2 id="docker常用命令"><a href="#docker常用命令" class="headerlink" title="docker常用命令"></a>docker常用命令</h2><p><strong>启动Docker服务</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
+
+<p><strong>停止Docker服务</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop docker</span><br></pre></td></tr></table></figure>
+
+<p><strong>重启Docker服务</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
+
+<p><strong>添加Docker服务开机启动</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable docker</span><br></pre></td></tr></table></figure>
+
+<p><strong>有了镜像后用镜像创建并启动一个具体的容器：（下边例子是用拉取下来的镜像创建并启动一个mysql容器）</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 3306:3306 --name mysql \</span><br><span class="line"></span><br><span class="line">-v /mydata/mysql/<span class="built_in">log</span>:/var/<span class="built_in">log</span>/mysql \</span><br><span class="line"></span><br><span class="line">-v /mydata/mysql/data:/var/lib/mysql \</span><br><span class="line"></span><br><span class="line">-v /mydata/mysql/conf:/etc/mysql \</span><br><span class="line"></span><br><span class="line">-e MYSQL_ROOT_PASSWORD=root \</span><br><span class="line"></span><br><span class="line">-d mysql:5.7</span><br></pre></td></tr></table></figure>
+
+<p><strong>查看当前正在运行的容器</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
+
+<p><strong>查看所有的容器，包括目前不在运行的</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
+
+<p>停止一个容器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stop 容器名字</span><br></pre></td></tr></table></figure>
+
+<p>#<strong>把停止的容器启动</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker start 名称/容器id</span><br></pre></td></tr></table></figure>
+
+<p>#<strong>重启容器</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker restart 名称/容器id</span><br></pre></td></tr></table></figure>
+
+<p>#<strong>以交互模式进入容器内部，容器都在/usr/local目录下</strong></p>
+<h2 id="如tomcat容器，目录为-usr-local-tomcat；mysql容器，目录在-usr-local-mysql目录下"><a href="#如tomcat容器，目录为-usr-local-tomcat；mysql容器，目录在-usr-local-mysql目录下" class="headerlink" title="如tomcat容器，目录为/usr/local/tomcat；mysql容器，目录在/usr/local/mysql目录下"></a>如tomcat容器，目录为/usr/local/tomcat；mysql容器，目录在/usr/local/mysql目录下</h2><p>docker exec -itd 名称/容器id bash</p>
+<p>#删除容器</p>
+<p>docker rm 容器名称/容器id</p>
+<p>#docker复制src到指定容器的目录，如果src是目录则连同目录都会被复制</p>
+<p>docker cp src 容器名字(容器id):容器目录</p>
+<h2 id="查看指定容器的运行日志"><a href="#查看指定容器的运行日志" class="headerlink" title="查看指定容器的运行日志"></a>查看指定容器的运行日志</h2><p>docker logs 容器名</p>
+<h2 id="三、docker镜像加速："><a href="#三、docker镜像加速：" class="headerlink" title="三、docker镜像加速："></a>三、docker镜像加速：</h2><p>1、国内从DockerHub拉取镜像有时会遇到困难，此时可以配置镜像加速器。</p>
+<p>阿里云镜像获取地址：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors</span><br></pre></td></tr></table></figure>
+
+<p>注册登录进去，在镜像加速器中会显示你专属的加速器地址，我的：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://l2hfopre.mirror.aliyuncs.com</span><br></pre></td></tr></table></figure>
+
+<p>2、给docker配置阿里云镜像加速：</p>
+<p>&lt;1&gt;在**/etc/docker/daemon.json**中写入如下内容(如果文件不存在请新建该文件)：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="string">&quot;registry-mirrors&quot;</span>:[<span class="string">&quot;https://l2hfopre.mirror.aliyuncs.com&quot;</span>]&#125;</span><br></pre></td></tr></table></figure>
+
+<p>&lt;2&gt;重新加载daemon并重启docker：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">systemctl daemon-reload</span><br><span class="line"></span><br><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
+
+<h2 id="四、docker镜像："><a href="#四、docker镜像：" class="headerlink" title="四、docker镜像："></a>四、docker镜像：</h2><p>1、根据镜像名和版本号获取镜像：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull 镜像名[:版本号]</span><br></pre></td></tr></table></figure>
+
+<p>注意：版本号可以省略，默认为最新版本，即:latest</p>
+<p>2、查看当前机器上的docker镜像列表：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">docker images，显示的镜像信息各项说明：</span><br><span class="line"></span><br><span class="line">&lt;1&gt;REPOSITORY：镜像的仓库源(镜像名/镜像源)</span><br><span class="line"></span><br><span class="line">&lt;2&gt;TAG：镜像的标签(版本号)</span><br><span class="line"></span><br><span class="line">&lt;3&gt;IMAGE ID：镜像ID</span><br><span class="line"></span><br><span class="line">&lt;4&gt;CREATED：镜像创建时间</span><br><span class="line"></span><br><span class="line">&lt;5&gt;SIZE：镜像大小 </span><br></pre></td></tr></table></figure>
+
+<p>3、删除镜像(删除镜像时，必须是没有容器使用这个镜像时才能删除)：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi 镜像名</span><br></pre></td></tr></table></figure>
+
+<p>4、查找镜像：在阿里云镜像查找。</p>
+<p>&lt;1&gt;搜索镜像：<span class="exturl" data-url="aHR0cHM6Ly9jci5jb25zb2xlLmFsaXl1bi5jb20vY24taGFuZ3pob3UvaW5zdGFuY2VzL21pcnJvcnM=">https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors</span></p>
+<p>&lt;2&gt;创建镜像资源库保存镜像：</p>
+<p>开通并设置密码：我的-用户名阿里云账户全名，我的密码：docker0728</p>
+<p>&lt;3&gt;使用docker命令搜索镜像(推荐使用)：</p>
+<p>docker search 镜像名;如搜索mysql的可用镜像：docker search mysql;</p>
+<p>5、运行镜像：结果会为该镜像创建一个容器实例。</p>
+<p>docker run -itd –name 容器名 -p x:y -e 参数 镜像源</p>
+<p>案例：运行mysql镜像生成mysql容器：</p>
+<p><strong>docker run -itd –name mysql-container -p 3307:3306 -e MYSQL_ROOT_PASSWORD=123 mysql</strong></p>
+<p>运行mysql镜像源，生成的容器名为mysql-container，将容器的3306端口映射到宿主机的3307端口，指定root用户的密码为123。</p>
+<p>run参数-itd：如果不指定，则启动容器后是一个阻塞窗口。</p>
+<p>i：以交互模式运行容器，通常与-t同时使用。</p>
+<p>t：为容器重新分配一个伪输入终端，通常与-i同时使用。</p>
+<p>d：后台运行容器，并返回容器ID。</p>
+<p>如果只显示一个字符串则表示容器创建成功。</p>
+<p><strong>6、构建自己的镜像：</strong></p>
+<p>使用命令docker build,从零开始来创建一个新的镜像。为此，我们需要创建一个Dockerfile文件，其中包含一组指令来告诉Docker如何构建我们的镜像。</p>
+<p>docker安装mysql：</p>
+<p>1、拉取mysql镜像：</p>
+<p>docker pull mysql</p>
+<p><strong>2、查看镜像验证是否拉取成功：</strong></p>
+<p>docker images</p>
+<p><strong>3、运行镜像生成mysql容器：</strong></p>
+<p>docker run -itd –name 容器名 -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123 mysql</p>
+<p><strong>4、查看容器是否运行成功</strong>：</p>
+<p>docker ps</p>
+<p><strong>5、问题：mysql8 之前的版本中加密规则是mysql_native_password,而在mysql8之后,加密规则是caching_sha2_password，导致navicate连接不上mysql容器，解决方式：</strong></p>
+<p>进入mysql容器：</p>
+<p>docker exec -it mysql容器名 bash</p>
+<p> 命令登录进入mysql：</p>
+<p>mysql -u root -p，回车输入密码。</p>
+<p>或者</p>
+<p>mysql -uroot -p123，回车。</p>
+<p>【注意】ctrl+d表示退出。</p>
+<p>  use mysql;使用mysql数据库。</p>
+<p>修改密码加密规则：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER USER <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;%&#x27;</span> IDENTIFIED WITH mysql_native_password BY <span class="string">&#x27;456&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>重启mysql容器：docker restart mysql容器名</p>
+<p>【注意】nativate连接docker mysql指定的ip为docker所在机器的ip。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">change master to master_host=<span class="string">&#x27;172.17.0.3&#x27;</span>,master_user=<span class="string">&#x27;root&#x27;</span>,master_password=<span class="string">&#x27;123&#x27;</span>,master_port=3310,master_log_file=<span class="string">&#x27;mysql-bin.000002&#x27;</span>,master_log_pos=2060,master_connect_retry=30;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker inspect --format=&#x27;&#123;&#123;.NetworkSettings.IPAddress&#125;&#125;&#x27; mysql-master;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>docker安装tomcat：</p>
+<p>1、拉取tomcat镜像：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull tomcat</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>2、查看镜像验证是否拉取成功：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
+
+
+
+<p>3、运行镜像生成tomcat容器：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -itd --name tomcat-container -p 8080:8080 tomcat</span><br></pre></td></tr></table></figure>
+
+
+
+<p>4、查看容器是否运行成功：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
+
+
+
+<p>5、tomat容器运行后，还不能访问(404)，进入tomcat容器：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it tomcat容器名 bash</span><br></pre></td></tr></table></figure>
+
+
+
+<p>6、tomcat容器中有两个目录webapps和webapps.dist,webapps中没有东西，而webapps.dist有webapps中应有的东西(webapps放部署的应用)：</p>
+<p>删除webapps目录：</p>
+<p>rm -rf webapps</p>
+<p>将webspps.dist重命名为webapps</p>
+<p>mv webapps.dist webapp</p>
+<p>7、重启tomcat容器：</p>
+<p>docker restart tomcat容器名</p>
+
+      <div class="tags">
+          <a href="https://jieoyjj.gitee.io/itonte-project-separation/tags/linux/" rel="tag"><i class="ic i-tag"></i> linux</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2022-04-12 20:51:00" itemprop="dateModified" datetime="2022-04-12T20:51:00+08:00">2022-04-12</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="https://jieoyjj.gitee.io/itonte-project-separation/images/wechatpay.png" alt="it 老夫 WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div>
+        <img data-src="https://jieoyjj.gitee.io/itonte-project-separation/images/alipay.png" alt="it 老夫 Alipay">
+        <p>Alipay</p>
+      </div>
+      
+      <div>
+        <img data-src="https://jieoyjj.gitee.io/itonte-project-separation/images/paypal.png" alt="it 老夫 PayPal">
+        <p>PayPal</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>it 老夫 <i class="ic i-at"><em>@</em></i>ITVETERAN
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/docker/" title="docker">https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/docker/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/linux/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipewkhf1zj20zk0m81kx.jpg" title="linux">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> linux</span>
+  <h3>linux</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/redis/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giciukx8a7j20zk0m8aio.jpg" title="redis file">
+  <span class="type">Next Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>redis file</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E5%89%8D%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%9A%84%E9%97%AE%E9%A2%98-%E7%94%A8%E6%9D%A5%E5%BC%95%E5%87%BAdocker"><span class="toc-number">1.</span> <span class="toc-text">目前软件开发的问题(用来引出docker)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#docker-%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.</span> <span class="toc-text">docker 介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81docker%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%EF%BC%9A"><span class="toc-number">3.</span> <span class="toc-text">5、docker应用场景：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">4.</span> <span class="toc-text">docker常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82tomcat%E5%AE%B9%E5%99%A8%EF%BC%8C%E7%9B%AE%E5%BD%95%E4%B8%BA-usr-local-tomcat%EF%BC%9Bmysql%E5%AE%B9%E5%99%A8%EF%BC%8C%E7%9B%AE%E5%BD%95%E5%9C%A8-usr-local-mysql%E7%9B%AE%E5%BD%95%E4%B8%8B"><span class="toc-number">5.</span> <span class="toc-text">如tomcat容器，目录为&#x2F;usr&#x2F;local&#x2F;tomcat；mysql容器，目录在&#x2F;usr&#x2F;local&#x2F;mysql目录下</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%8C%87%E5%AE%9A%E5%AE%B9%E5%99%A8%E7%9A%84%E8%BF%90%E8%A1%8C%E6%97%A5%E5%BF%97"><span class="toc-number">6.</span> <span class="toc-text">查看指定容器的运行日志</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81docker%E9%95%9C%E5%83%8F%E5%8A%A0%E9%80%9F%EF%BC%9A"><span class="toc-number">7.</span> <span class="toc-text">三、docker镜像加速：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81docker%E9%95%9C%E5%83%8F%EF%BC%9A"><span class="toc-number">8.</span> <span class="toc-text">四、docker镜像：</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+        <ul>
+          <li><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/linux/" rel="bookmark" title="linux">linux</a></li><li class="active"><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/docker/" rel="bookmark" title="docker">docker</a></li><li><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/15/linux%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%E5%A4%A7%E5%85%A8/" rel="bookmark" title="linux 软件安装">linux 软件安装</a></li><li><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/09/%E9%9D%99%E6%80%81ip%E5%9C%B0%E5%9D%80/" rel="bookmark" title="静态ip地址">静态ip地址</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="it 老夫"
+      data-src="https://jieoyjj.gitee.io/itonte-project-separation/images/avatar.jpg">
+  <p class="name" itemprop="name">it 老夫</p>
+  <div class="description" itemprop="description">itveteran personal blog</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="https://jieoyjj.gitee.io/itonte-project-separation/archives/">
+        <span class="count">16</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/">
+        <span class="count">6</span>
+        <span class="name">categories</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="https://jieoyjj.gitee.io/itonte-project-separation/tags/">
+        <span class="count">6</span>
+        <span class="name">tags</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL0ppZWxlc3MtSHVi" title="https:&#x2F;&#x2F;github.com&#x2F;Jieless-Hub"><i class="ic i-github"></i></span>
+      <span class="exturl item gitee" data-url="aHR0cHM6Ly9naXRlZS5jb20vSmllb3lqag==" title="https:&#x2F;&#x2F;gitee.com&#x2F;Jieoyjj"><i class="ic i-facebook"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvbXkvbS9tdXNpYy9wbGF5bGlzdD9pZD01NDUzNDg1OTUy" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;my&#x2F;m&#x2F;music&#x2F;playlist?id&#x3D;5453485952"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOml0b3RvbnRlQDE2My5jb20=" title="mailto:itotonte@163.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="https://jieoyjj.gitee.io/itonte-project-separation/" rel="section"><i class="ic i-home"></i>主页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="https://jieoyjj.gitee.io/itonte-project-separation/aboutme/" rel="section"><i class="ic i-list-alt"></i>关于我</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="https://jieoyjj.gitee.io/itonte-project-separation/learningwebsite/" rel="section"><i class="ic i-magic"></i>开往</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="https://jieoyjj.gitee.io/itonte-project-separation/mistake/" rel="section"><i class="ic i-heart"></i>错误本</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>Posts</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/" rel="section"><i class="ic i-th"></i>Categories</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="https://jieoyjj.gitee.io/itonte-project-separation/tags/" rel="section"><i class="ic i-tags"></i>Tags</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/linux/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/redis/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/git/" title="In git">git</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/gitee/" title="Gitee">Gitee</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/02/json/" title="json">json</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/vue/" title="In vue">vue</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/02/vue%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%81%8A%E5%A4%A9/" title="vue机器人聊天">vue机器人聊天</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/linux/" title="In linux">linux</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/15/linux%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%E5%A4%A7%E5%85%A8/" title="linux 软件安装">linux 软件安装</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/linux/" title="In linux">linux</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/09/%E9%9D%99%E6%80%81ip%E5%9C%B0%E5%9D%80/" title="静态ip地址">静态ip地址</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/12/mqtt/" title="MQTT">MQTT</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/vue/" title="In vue">vue</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/vue/" title="vue">vue</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/02/md5/" title="md5">md5</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/linux/" title="In linux">linux</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/linux/" title="linux">linux</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/linux/" title="In linux">linux</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/docker/" title="docker">docker</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">it 老夫 @ Yume IT Veteran blogs</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2021/10/13/docker/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,audio: ["https://music.163.com/#/song?id=1357447342"],fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',quiz: {
+      choice: "Multiple Choice",
+      multiple: "Multiple Answer",
+      true_false: "True/False",
+      essay: "Questions",
+      gap_fill: "Gap Filling",
+      mistake: "Wrong Answer"
+    },
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="https://jieoyjj.gitee.io/itonte-project-separation/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
