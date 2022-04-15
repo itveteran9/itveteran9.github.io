@@ -24,15 +24,13 @@
 <link rel="stylesheet" href="https://jieoyjj.gitee.io/itonte-project-separation/css/app.css?v=0.2.5">
 
   
-  <meta name="keywords" content="java" />
 
-
-<link rel="canonical" href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/12/webfluxCrud%E6%A1%88%E4%BE%8B/">
+<link rel="canonical" href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/14/%E5%8F%82%E6%95%B0/">
 
 
 
   <title>
-webfluxCrud案例 - java |
+参数 |
 Yume IT Veteran blogs = ITVETERAN = 总访问量 21710 👁</title>
 <meta name="generator" content="Hexo 5.4.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -60,16 +58,16 @@ Yume IT Veteran blogs = ITVETERAN = 总访问量 21710 👁</title>
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">webfluxCrud案例
+  <h1 itemprop="name headline">参数
   </h1>
   
 <div class="meta">
-  <span class="item" title="Created: 2022-04-12 18:13:14">
+  <span class="item" title="Created: 2022-04-14 23:34:37">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
     <span class="text">Posted on</span>
-    <time itemprop="dateCreated datePublished" datetime="2022-04-12T18:13:14+08:00">2022-04-12</time>
+    <time itemprop="dateCreated datePublished" datetime="2022-04-14T23:34:37+08:00">2022-04-14</time>
   </span>
 </div>
 
@@ -102,12 +100,12 @@ Yume IT Veteran blogs = ITVETERAN = 总访问量 21710 👁</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph4wqtg4j20zk0m8x6p.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicitspjpbj20zk0m81ky.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicli3sbvtj20zk0m8x6p.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipexw3o58j20zk0m8e81.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipev1x5e4j20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipewkhf1zj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciuja1j1j20zk0m8kjl.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeudstjqj20zk0m8k3r.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipevuctzzj20zk0m84qp.jpg"></li>
           <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeuv80yoj20zk0m8kjl.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclffsa1cj20zk0m811l.jpg"></li>
         </ul>
       </div>
     </header>
@@ -132,13 +130,11 @@ Yume IT Veteran blogs = ITVETERAN = 总访问量 21710 👁</title>
     
 <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 <i class="ic i-home"></i>
-<span><a href="https://jieoyjj.gitee.io/itonte-project-separation/">itveteran</a></span><i class="ic i-angle-right"></i>
-<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/java/" itemprop="item" rel="index" title="In java"><span itemprop="name">java</span></a>
-<meta itemprop="position" content="1" /></span>
+<span><a href="https://jieoyjj.gitee.io/itonte-project-separation/">itveteran</a></span>
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
-  <link itemprop="mainEntityOfPage" href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/12/webfluxCrud%E6%A1%88%E4%BE%8B/">
+  <link itemprop="mainEntityOfPage" href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/14/%E5%8F%82%E6%95%B0/">
 
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="https://jieoyjj.gitee.io/itonte-project-separation/images/avatar.jpg">
@@ -153,29 +149,12 @@ Yume IT Veteran blogs = ITVETERAN = 总访问量 21710 👁</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <img data-src="https://img.imgdb.cn/item/6078e4398322e6675c3ac487.gif">
-
-<blockquote>
-<p><code>Spring WebFlux是一套全新的Reactive Web技术栈，实现完全非阻塞，支持Reactive Streams背压等        特性，并且运行环境不限于[Servlet](https://so.csdn.net/so/search?q=Servlet&amp;spm=1001.2101.3001.7020)容器（Tomcat、Jetty、Undertow），如Netty等。 </code></p>
-</blockquote>
-<p>   <code>Webflux CRUD Demo File</code></p>
-<p>   <span class="exturl" data-url="aHR0cHM6Ly9naXRlZS5jb20vaXRvdG9udGUvaXR2ZXRlcmFub2Zib290d2ViZmx1eA==">Gitee地址</span></p>
-
-      <div class="tags">
-          <a href="https://jieoyjj.gitee.io/itonte-project-separation/tags/java/" rel="tag"><i class="ic i-tag"></i> java</a>
-      </div>
+    
   </div>
 
    <footer>
 
     <div class="meta">
-  <span class="item">
-    <span class="icon">
-      <i class="ic i-calendar-check"></i>
-    </span>
-    <span class="text">Edited on</span>
-    <time title="Modified: 2022-04-12 18:35:58" itemprop="dateModified" datetime="2022-04-12T18:35:58+08:00">2022-04-12</time>
-  </span>
 </div>
 
       
@@ -210,7 +189,7 @@ Yume IT Veteran blogs = ITVETERAN = 总访问量 21710 👁</title>
   </li>
   <li class="link">
     <strong>Post link: </strong>
-    <a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/12/webfluxCrud%E6%A1%88%E4%BE%8B/" title="webfluxCrud案例">https://jieoyjj.gitee.io/itonte-project-separation/2022/04/12/webfluxCrud案例/</a>
+    <a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/14/%E5%8F%82%E6%95%B0/" title="参数">https://jieoyjj.gitee.io/itonte-project-separation/2022/04/14/参数/</a>
   </li>
   <li class="license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
@@ -229,20 +208,20 @@ Yume IT Veteran blogs = ITVETERAN = 总访问量 21710 👁</title>
     <div class="item left">
       
 
-  <a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/11/%E8%B6%85%E5%AE%9E%E7%94%A8%E7%81%B5%E6%B4%BB%E6%B3%A8%E8%A7%A3%E7%BC%93%E5%AD%98/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipey0a334j20zk0m8qpt.jpg" title="超实用灵活注解缓存">
+  <a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/14/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%9A%E6%97%B6%E6%B8%85%E7%90%86%E8%A1%A8%E6%95%B0%E6%8D%AE/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclxxcb6rj20zk0m8b29.jpg" title="数据库定时清理表数据">
   <span class="type">Previous Post</span>
-  <span class="category"><i class="ic i-flag"></i> redis</span>
-  <h3>超实用灵活注解缓存</h3>
+  <span class="category"><i class="ic i-flag"></i> mysql</span>
+  <h3>数据库定时清理表数据</h3>
   </a>
 
     </div>
     <div class="item right">
       
 
-  <a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/13/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B7%B3%E8%BD%AC%E9%A1%B5%E9%9D%A2%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicitcxhpij20zk0m8hdt.jpg" title="微信小程序跳转页面报错问题">
+  <a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/14/restTemplateget%E8%AF%B7%E6%B1%82%E6%80%8E%E4%B9%88%E4%BC%A0body%E5%8F%82%E6%95%B0/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicitf0kl1j20zk0m87fe.jpg" title="restTemplateget请求怎么传body参数">
   <span class="type">Next Post</span>
-  <span class="category"><i class="ic i-flag"></i> </span>
-  <h3>微信小程序跳转页面报错问题</h3>
+  <span class="category"><i class="ic i-flag"></i> java</span>
+  <h3>restTemplateget请求怎么传body参数</h3>
   </a>
 
     </div>
@@ -263,9 +242,6 @@ Yume IT Veteran blogs = ITVETERAN = 总访问量 21710 👁</title>
       <div class="contents panel pjax" data-title="Contents">
       </div>
       <div class="related panel pjax" data-title="Related">
-        <ul>
-          <li class="active"><a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/12/webfluxCrud%E6%A1%88%E4%BE%8B/" rel="bookmark" title="webfluxCrud案例">webfluxCrud案例</a></li><li><a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/14/restTemplateget%E8%AF%B7%E6%B1%82%E6%80%8E%E4%B9%88%E4%BC%A0body%E5%8F%82%E6%95%B0/" rel="bookmark" title="restTemplateget请求怎么传body参数">restTemplateget请求怎么传body参数</a></li>
-        </ul>
       </div>
       <div class="overview panel" data-title="Overview">
         <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -350,12 +326,12 @@ Yume IT Veteran blogs = ITVETERAN = 总访问量 21710 👁</title>
 
   <ul id="quick">
     <li class="prev pjax">
-        <a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/11/%E8%B6%85%E5%AE%9E%E7%94%A8%E7%81%B5%E6%B4%BB%E6%B3%A8%E8%A7%A3%E7%BC%93%E5%AD%98/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
+        <a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/14/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%9A%E6%97%B6%E6%B8%85%E7%90%86%E8%A1%A8%E6%95%B0%E6%8D%AE/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
-        <a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/13/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B7%B3%E8%BD%AC%E9%A1%B5%E9%9D%A2%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
+        <a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/14/restTemplateget%E8%AF%B7%E6%B1%82%E6%80%8E%E4%B9%88%E4%BC%A0body%E5%8F%82%E6%95%B0/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -377,44 +353,6 @@ Yume IT Veteran blogs = ITVETERAN = 总访问量 21710 👁</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/java/" title="In java">java</a>
-</div>
-
-    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/12/webfluxCrud%E6%A1%88%E4%BE%8B/" title="webfluxCrud案例">webfluxCrud案例</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/02/md5/" title="md5">md5</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/linux/" title="In linux">linux</a>
-</div>
-
-    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/09/%E9%9D%99%E6%80%81ip%E5%9C%B0%E5%9D%80/" title="静态ip地址">静态ip地址</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/02/json/" title="json">json</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 </div>
 
     <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/redis/" title="redis file">redis file</a></span>
@@ -424,19 +362,29 @@ Yume IT Veteran blogs = ITVETERAN = 总访问量 21710 👁</title>
   <li class="item">
     
 <div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/redis/" title="In redis">redis</a>
 </div>
 
-    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/12/mqtt/" title="MQTT">MQTT</a></span>
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/11/%E8%B6%85%E5%AE%9E%E7%94%A8%E7%81%B5%E6%B4%BB%E6%B3%A8%E8%A7%A3%E7%BC%93%E5%AD%98/" title="超实用灵活注解缓存">超实用灵活注解缓存</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/vue/" title="In vue">vue</a>
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/linux/" title="In linux">linux</a>
 </div>
 
-    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/15/vue%E5%AE%9E%E7%8E%B0%E6%A0%B9%E6%8D%AEip%E5%9C%B0%E5%9D%80%E8%8E%B7%E5%8F%96%E5%9C%B0%E5%8C%BA%E5%A4%A9%E6%B0%94/" title="vue实现根据ip地址获取地区天气">vue实现根据ip地址获取地区天气</a></span>
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/docker/" title="docker">docker</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/14/%E5%8F%82%E6%95%B0/" title="参数">参数</a></span>
   </li>
 
       
@@ -453,10 +401,10 @@ Yume IT Veteran blogs = ITVETERAN = 总访问量 21710 👁</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/java/" title="In java">java</a>
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/vue/" title="In vue">vue</a>
 </div>
 
-    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/14/restTemplateget%E8%AF%B7%E6%B1%82%E6%80%8E%E4%B9%88%E4%BC%A0body%E5%8F%82%E6%95%B0/" title="restTemplateget请求怎么传body参数">restTemplateget请求怎么传body参数</a></span>
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/15/vue%E5%AE%9E%E7%8E%B0%E6%A0%B9%E6%8D%AEip%E5%9C%B0%E5%9D%80%E8%8E%B7%E5%8F%96%E5%9C%B0%E5%8C%BA%E5%A4%A9%E6%B0%94/" title="vue实现根据ip地址获取地区天气">vue实现根据ip地址获取地区天气</a></span>
   </li>
 
       
@@ -467,6 +415,36 @@ Yume IT Veteran blogs = ITVETERAN = 总访问量 21710 👁</title>
 </div>
 
     <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/12/mysql/" title="MYSQL">MYSQL</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/mysql/" title="In mysql">mysql</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2022/04/14/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%9A%E6%97%B6%E6%B8%85%E7%90%86%E8%A1%A8%E6%95%B0%E6%8D%AE/" title="数据库定时清理表数据">数据库定时清理表数据</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/linux/" title="In linux">linux</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/11/09/%E9%9D%99%E6%80%81ip%E5%9C%B0%E5%9D%80/" title="静态ip地址">静态ip地址</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="https://jieoyjj.gitee.io/itonte-project-separation/categories/linux/" title="In linux">linux</a>
+</div>
+
+    <span><a href="https://jieoyjj.gitee.io/itonte-project-separation/2021/10/13/linux/" title="linux">linux</a></span>
   </li>
 
   </ul>
@@ -497,7 +475,7 @@ Yume IT Veteran blogs = ITVETERAN = 总访问量 21710 👁</title>
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: '2022/04/12/webfluxCrud案例/',
+    path: '2022/04/14/参数/',
     favicon: {
       show: "（●´3｀●）Goooood",
       hide: "(´Д｀)Booooom"
